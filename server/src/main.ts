@@ -7,6 +7,8 @@ async function bootstrap() {
 
   app.enableCors({
     origin: 'http://localhost:5173',
+    //允許所有 localhost port สำหรับ development
+    //origin: true,
   });
 
   await app.listen(process.env.PORT ?? 3000);
