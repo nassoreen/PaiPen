@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
+import { LandingPage } from './pages/landing/LandingPage';
 
-function App() {
+function Home() {
   const [message, setMessage] = useState('กำลังเชื่อมต่อ Backend...');
 
   useEffect(() => {
@@ -9,7 +10,6 @@ function App() {
         if (!response.ok) {
           throw new Error('Backend error');
         }
-
         return response.text();
       })
       .then(setMessage)
@@ -23,6 +23,31 @@ function App() {
       <h1>PaiPen</h1>
       <p>ข้อความจาก NestJS: {message}</p>
     </main>
+  );
+}
+
+function App() {
+  const [page, setPage] = useState<'login' | 'home'>(
+    localStorage.getItem('token') ? 'home' : 'login',
+  );
+
+  if (page === 'login') {
+    return <LandingPage />;
+  }
+
+  return (
+    <div>
+      <Home />
+      <button
+        onClick={() => {
+          localStorage.removeItem('token');
+          setPage('login');
+        }}
+        style={{ margin: '16px', padding: '8px 16px', cursor: 'pointer' }}
+      >
+        ออกจากระบบ
+      </button>
+    </div>
   );
 }
 
