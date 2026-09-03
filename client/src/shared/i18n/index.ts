@@ -10,14 +10,14 @@ import enInvite from "./locales/en/invite.json";
 import enAgent from "./locales/en/agent.json";
 import enLanding from "./locales/en/landing.json";
 import enError from "./locales/en/error.json";
-import zhCommon from "./locales/zh/common.json";
-import zhTrips from "./locales/zh/trips.json";
-import zhPlanner from "./locales/zh/planner.json";
-import zhAuth from "./locales/zh/auth.json";
-import zhInvite from "./locales/zh/invite.json";
-import zhAgent from "./locales/zh/agent.json";
-import zhLanding from "./locales/zh/landing.json";
-import zhError from "./locales/zh/error.json";
+import zhCommon from "./locales/th/common.json";
+import zhTrips from "./locales/th/trips.json";
+import zhPlanner from "./locales/th/planner.json";
+import zhAuth from "./locales/th/auth.json";
+import zhInvite from "./locales/th/invite.json";
+import zhAgent from "./locales/th/agent.json";
+import zhLanding from "./locales/th/landing.json";
+import zhError from "./locales/th/error.json";
 
 export const resources = {
   en: { common: enCommon, trips: enTrips, planner: enPlanner, auth: enAuth, invite: enInvite, agent: enAgent, landing: enLanding, error: enError },
