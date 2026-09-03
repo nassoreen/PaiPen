@@ -10,21 +10,21 @@ import enInvite from "./locales/en/invite.json";
 import enAgent from "./locales/en/agent.json";
 import enLanding from "./locales/en/landing.json";
 import enError from "./locales/en/error.json";
-import zhCommon from "./locales/th/common.json";
-import zhTrips from "./locales/th/trips.json";
-import zhPlanner from "./locales/th/planner.json";
-import zhAuth from "./locales/th/auth.json";
-import zhInvite from "./locales/th/invite.json";
-import zhAgent from "./locales/th/agent.json";
-import zhLanding from "./locales/th/landing.json";
-import zhError from "./locales/th/error.json";
+import thCommon from "./locales/th/common.json";
+import thTrips from "./locales/th/trips.json";
+import thPlanner from "./locales/th/planner.json";
+import thAuth from "./locales/th/auth.json";
+import thInvite from "./locales/th/invite.json";
+import thAgent from "./locales/th/agent.json";
+import thLanding from "./locales/th/landing.json";
+import thError from "./locales/th/error.json";
 
 export const resources = {
   en: { common: enCommon, trips: enTrips, planner: enPlanner, auth: enAuth, invite: enInvite, agent: enAgent, landing: enLanding, error: enError },
-  zh: { common: zhCommon, trips: zhTrips, planner: zhPlanner, auth: zhAuth, invite: zhInvite, agent: zhAgent, landing: zhLanding, error: zhError },
+  th: { common: thCommon, trips: thTrips, planner: thPlanner, auth: thAuth, invite: thInvite, agent: thAgent, landing: thLanding, error: thError },
 } as const;
 
-export const supportedLanguages = ["en", "zh"] as const;
+export const supportedLanguages = ["en", "th"] as const;
 export type SupportedLanguage = (typeof supportedLanguages)[number];
 
 export const defaultNS = "common";

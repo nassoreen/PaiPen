@@ -25,12 +25,12 @@
       "action": "允许"
     }
   },
-    "appName": "OpenTrip",
+    "appName": "PaiPen",
     "tagline": "每一场难忘的旅行，都始于群聊。",
     "language": "语言",
     "languageName": {
         "en": "English",
-        "zh": "中文"
+        "th": "ไทย"
     },
     "actions": {
         "back": "返回行程列表",

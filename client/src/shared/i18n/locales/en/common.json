@@ -25,12 +25,12 @@
       "action": "Allow"
     }
   },
-    "appName": "OpenTrip",
+    "appName": "PaiPen",
     "tagline": "Every great trip starts as a group chat.",
     "language": "Language",
     "languageName": {
         "en": "English",
-        "zh": "中文"
+        "th": "ไทย"
     },
     "actions": {
         "back": "Back to trips",
