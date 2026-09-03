@@ -11,7 +11,6 @@ import { InvitePage } from "@/pages/invite";
 import { TripsPage } from "@/pages/trips";
 import { TravelPlannerPage } from "@/pages/travel-planner";
 import { ErrorPage } from "@/pages/error";
-import { SettingsDialog } from "@/widgets/settings-dialog";
 
 function Routes() {
   const { path } = useRouter();
@@ -59,7 +58,6 @@ function Gate({
   return (
     <>
       <Routes />
-      <SettingsDialog />
     </>
   );
 }
