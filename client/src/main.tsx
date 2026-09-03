@@ -1,17 +1,16 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { App } from "@/app/App";
-import { applyTheme } from "@/features/theme";
+import { AuthPage } from "@/pages/auth";
 import "@/app/styles/global.css";
-import "maplibre-gl/dist/maplibre-gl.css";
 
-applyTheme();
+const appElement = document.getElementById("app");
 
-const rootEl = document.getElementById("root");
-if (!rootEl) throw new Error("Root element #root not found");
+if (!appElement) {
+  throw new Error("ไม่พบ element #app");
+}
 
-createRoot(rootEl).render(
+createRoot(appElement).render(
   <StrictMode>
-    <App />
+    <AuthPage />
   </StrictMode>,
 );

@@ -1,36 +1,21 @@
-import { useTranslation } from "react-i18next";
-import { AuthForm } from "@/features/auth";
-import { useRouter } from "@/app/router";
-import { Card } from "@/shared/ui/card";
-import { interactive } from "@/shared/lib";
-import { LanguageSwitch } from "@/shared/i18n/LanguageSwitch";
+import { AuthForm } from "@/app/features/auth";
 
 export function AuthPage() {
-  const { t } = useTranslation("common");
-  const { navigate } = useRouter();
   return (
-    <div className="flex min-h-dvh flex-col bg-background pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)]">
-      <header className="flex items-center justify-between px-6 py-4">
-        <button
-          type="button"
-          onClick={() => navigate("/")}
-          aria-label={t("appName")}
-          className={`-mx-2 rounded-lg px-2 py-1 font-heading text-lg font-semibold ${interactive}`}
-        >
-          {t("appName")}
-        </button>
-        <LanguageSwitch />
-      </header>
-      <main className="flex flex-1 items-center justify-center px-6 pb-16">
-        <div className="w-full max-w-sm">
-          <Card className="wf-enter p-6">
-            <AuthForm />
-          </Card>
-          <p className="mt-4 text-center text-xs text-pretty text-muted-foreground">
-            {t("tagline")}
+    <main className="flex min-h-screen items-center justify-center bg-slate-100 px-6">
+      <div className="w-full max-w-sm rounded-2xl bg-white p-8 shadow-xl">
+        <div className="mb-6 text-center">
+          <h1 className="text-3xl font-bold text-violet-700">
+            PaiPen
+          </h1>
+
+          <p className="mt-2 text-sm text-slate-500">
+            วางแผนการเดินทางได้ง่ายขึ้น
           </p>
         </div>
-      </main>
-    </div>
+
+        <AuthForm />
+      </div>
+    </main>
   );
 }
